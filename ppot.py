@@ -13,6 +13,7 @@ while elemento_programa == elemento_usuario:
     print("Piedra, Papel o Tijera...")
     elemento_programa = [PIEDRA, PAPEL, TIJERA][random.randint(0, 2)]
     elemento_usuario = input()
+    print(elemento_programa)
 
 if elemento_programa == PAPEL:
     if elemento_usuario == PIEDRA:
