@@ -1,5 +1,5 @@
 import random
-print("Hola, ¡vamos a aprender fechas!")
+
 preguntas = [
     {
         "pregunta": "¿En qué año se firmó la paz de Westfalia?",
@@ -11,29 +11,26 @@ preguntas = [
     }
 ]
 
-pregunta = random.choice(preguntas)
-respuesta_usuario = input(pregunta["pregunta"] + "\n")
-respuesta_correcta = pregunta["respuesta"]
 
-if respuesta_correcta == respuesta_usuario:
-    print("¡Has acertado!")
-else:
-    print("Has fallado")
-continuacion = input("¿Quieres seguir jugando? (s/n) ")
-if continuacion == "s":
-    valor_continuacion = True
-elif continuacion == "n":
-    valor_continuacion = False
-else:
-    print("Entrada no válida. Introduce 's' o 'n'.")
-while valor_continuacion == True:
+def jugar():
     pregunta = random.choice(preguntas)
-    respuesta_usuario = input(pregunta["pregunta"] + "\n")
     respuesta_correcta = pregunta["respuesta"]
+    respuesta_usuario = input(pregunta["pregunta"] + "\n")
+
+    if respuesta_correcta == respuesta_usuario:
+        print("¡Has acertado!")
+    else:
+        print("Has fallado, es ", respuesta_correcta)
+
     continuacion = input("¿Quieres seguir jugando? (s/n) ")
     if continuacion == "s":
-        valor_continuacion = True
+        jugar()
     elif continuacion == "n":
-        valor_continuacion = False
+        print("¡Hasta luego!")
     else:
         print("Entrada no válida. Introduce 's' o 'n'.")
+        jugar()
+
+
+print("Hola, ¡vamos a aprender fechas!")
+jugar()
