@@ -19,7 +19,7 @@ def jugar():
         print("¡Hasta luego!")
     else:
         print("Entrada no válida. Introduce 's' o 'n'.")
-        jugar()
+        continuacion = input("¿Quieres seguir jugando? (s/n) ")
 
 
 print("Hola, ¡vamos a aprender fechas!")
