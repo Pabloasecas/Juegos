@@ -1,27 +1,39 @@
 import random
 print("Hola, ¡vamos a aprender fechas!")
-# paz_de_westfalia = "La Paz de Westfalia"
-# respuesta_correcta = int(1648)
-# print("En qué año se produjo", paz_de_westfalia)
-# respuesta_usuario = int(input())
 preguntas = [
     {
         "pregunta": "¿En qué año se firmó la paz de Westfalia?",
         "respuesta": "1648"
     },
+    {
+        "pregunta": "¿En qué año finalizó el reinado de Carlos II?",
+        "respuesta": "1700"
+    }
 ]
 
+pregunta = random.choice(preguntas)
+respuesta_usuario = input(pregunta["pregunta"] + "\n")
+respuesta_correcta = pregunta["respuesta"]
 
-def pregunta_aleatoria(preguntas):
+if respuesta_correcta == respuesta_usuario:
+    print("¡Has acertado!")
+else:
+    print("Has fallado")
+continuacion = input("¿Quieres seguir jugando? (s/n) ")
+if continuacion == "s":
+    valor_continuacion = True
+elif continuacion == "n":
+    valor_continuacion = False
+else:
+    print("Entrada no válida. Introduce 's' o 'n'.")
+while valor_continuacion == True:
     pregunta = random.choice(preguntas)
     respuesta_usuario = input(pregunta["pregunta"] + "\n")
-    restpuesta_correcta = pregunta["respuesta"]
-    return respuesta_usuario, restpuesta_correcta
-
-
-def juego(respuesta_correcta, respuesta_usuario):
-    if respuesta_correcta == respuesta_usuario:
-        print("¡Has acertado!")
+    respuesta_correcta = pregunta["respuesta"]
+    continuacion = input("¿Quieres seguir jugando? (s/n) ")
+    if continuacion == "s":
+        valor_continuacion = True
+    elif continuacion == "n":
+        valor_continuacion = False
     else:
-        print("Has fallado, fue en", respuesta_correcta)
-    return juego
+        print("Entrada no válida. Introduce 's' o 'n'.")
