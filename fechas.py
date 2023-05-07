@@ -1,4 +1,5 @@
 import random
+import sys
 from preguntas_fechas import preguntas
 
 
@@ -12,14 +13,21 @@ def jugar():
     else:
         print("Has fallado, es ", respuesta_correcta)
 
+    continuar()
+
+
+def continuar():
     continuacion = input("¿Quieres seguir jugando? (s/n) ")
-    if continuacion == "s":
-        jugar()
-    elif continuacion == "n":
-        print("¡Hasta luego!")
-    else:
+
+    while continuacion.lower() not in ["s", "n"]:
         print("Entrada no válida. Introduce 's' o 'n'.")
-        continuacion = input("¿Quieres seguir jugando? (s/n) ")
+        continuar()
+
+    if continuacion.lower() == "s":
+        jugar()
+    else:
+        print("¡Hasta luego!")
+        sys.exit()
 
 
 print("Hola, ¡vamos a aprender fechas!")
