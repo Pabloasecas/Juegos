@@ -1,6 +1,6 @@
 import random
 import sys
-from preguntas_fechas import preguntas
+from juego_fechas.preguntas_fechas import preguntas
 
 
 def jugar():
