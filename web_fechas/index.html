@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juego Fechas</title>
+    <script src="juego_fechas.js" type="text/javascript"></script>
+    <script src="preguntas_fechas.js" type="text/javascript"></script>
+</head>
+<body>
+    <h1>Juego de Fechas</h1>
+  <p id="pregunta"></p>
+  <input type="text" id="respuesta" placeholder="Escribe tu respuesta aquí" />
+  <button onclick="jugar()">Responder</button>
+
+  <script type="text/javascript">
+    // Coloca el código adicional necesario para iniciar el juego aquí
+    // Por ejemplo, puedes llamar a la función "jugar()" al cargar la página
+    // ...
+
+    // Ejemplo de código adicional: Mostrar la primera pregunta al cargar la página
+    var primeraPregunta = preguntas[0];
+    document.getElementById("pregunta").innerHTML = primeraPregunta.pregunta;
+  </script>
+</body>
+</html>
