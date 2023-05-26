@@ -39,5 +39,5 @@ def continuar():
         sys.exit()
 
 
-print("Hola, ¡vamos a aprender fechas!")
+print("Hola ¡¿Cómo están los máquinas?!, ¡vamos a aprender fechas!")
 jugar()
