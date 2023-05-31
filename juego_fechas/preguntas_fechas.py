@@ -16,7 +16,7 @@ preguntas = [
         "respuesta": "1512"
     },
     {
-        "pregunta": "¿En qué año se produjo la revuela de los comuneros?",
+        "pregunta": "¿En qué año se produjo la revuelta de los comuneros?",
         "respuesta": "1520"
     },
     {
